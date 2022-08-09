@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Result } from "antd";
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Result
+    status="success"
+    title="Successfully Purchased Cloud Server ECS!"
+    subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+    extra={[
+      <Button type="primary" key="console">
+        Go Console
+      </Button>,
+      <Button key="buy">Buy Again</Button>,
+    ]}
+  />
+);
 
 export default App;
